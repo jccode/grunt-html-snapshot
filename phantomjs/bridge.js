@@ -83,7 +83,7 @@ page.onInitialized = function() {
 
     function has(feature) {
         var prop = featureMap[feature];
-        return isFunction(proto[prop]);
+        return (typeof proto[prop] === 'function');
     }
 
     // check for missing features
